@@ -1,10 +1,15 @@
 body {
     background-color: rgb(77, 173, 51);
+    text-align: center;
 }
 
-h1,
-h2,
 button {
-    text-align: center;
-    padding: 1em;
+    padding: .5em;
+}
+
+img {
+    vertical-align: center;
+    height: 12.5rem;
+    width: 7.5rem;
+    border: 1px solid black;
 }
