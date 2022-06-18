@@ -89,7 +89,9 @@ function getValue(card) {
     let dataValue = parseInt(data);
 
 
-
+    /**
+     * Determines the value of non-number cards
+     */
     if (isNaN(dataValue)) {
         ;
         if (data === 'A') {
@@ -105,6 +107,22 @@ function getValue(card) {
 let topCard = newDeck[0];
 let topCardValue = getValue(topCard);
 
-console.log(topCardValue);
 
 setTable();
+
+
+/**
+ * If Hit button is clicked, player draws an extra card
+ */
+const hitBtn = document.getElementById("hit-btn");
+hitBtn.addEventListener("click", addPlayerCard);
+
+
+function addPlayerCard() {
+    let newCard = dealCard();
+    yourHand.push(newCard)
+    yourTotal += getValue(newCard);
+    console.log(yourHand);
+    console.log(yourTotal);
+}
+
