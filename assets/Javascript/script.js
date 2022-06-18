@@ -9,7 +9,6 @@ let yourHand = [];
 
 let hit = true;
 
-let faceDown;
 
 /**
  * Builds Deck of 52 cards from A-S, A-2, A-3 etc
@@ -61,10 +60,18 @@ function dealCard() {
  */
 
 function setTable() {
+
+
     while (dealerHand.length < 2) {
         let newCard = dealCard();
         dealerHand.push(newCard)
         dealerTotal += getValue(newCard);
+
+        let cardImg = document.createElement("img");
+        cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
+        document.getElementById("cards-dealer").append(cardImg);
+
+
         console.log(dealerHand);
         console.log(dealerTotal);
     }
@@ -73,6 +80,11 @@ function setTable() {
         let newCard = dealCard();
         yourHand.push(newCard)
         yourTotal += getValue(newCard);
+
+        let cardImg = document.createElement("img");
+        cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
+        document.getElementById("cards-yours").append(cardImg);
+
         console.log(yourHand);
         console.log(yourTotal);
     }
@@ -104,6 +116,9 @@ function getValue(card) {
     }
 }
 
+/**
+ * This is the first card played to the dealer, the one face down
+ */
 let topCard = newDeck[0];
 let topCardValue = getValue(topCard);
 
@@ -125,4 +140,3 @@ function addPlayerCard() {
     console.log(yourHand);
     console.log(yourTotal);
 }
-
