@@ -54,15 +54,16 @@ function dealCard() {
 }
 
 /**
- * Deals the dealer two cards, and then the player two cards
+ * Deals the dealer cards until he has a total of at least 16, and then deals the player two cards
  * While dealing the cards, it also calculates the value of each card and adds
  * how much each hand is worth
  */
 
 function setTable() {
+    dealerHand.unshift(topCard);
 
 
-    while (dealerHand.length < 2) {
+    while (dealerTotal < 16) {
         let newCard = dealCard();
         dealerHand.push(newCard)
         dealerTotal += getValue(newCard);
