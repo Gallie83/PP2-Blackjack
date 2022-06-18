@@ -45,11 +45,44 @@ let newDeck = buildDeck();
 shuffleDeck(newDeck);
 
 
-
-function dealCards() {
-    faceDown = deck.shift();
-    dealerTotal += getValue(faceDown);
+/**
+ * 
+ * Removes a card from the shuffled deck
+ */
+function dealCard() {
+    let card = newDeck.shift();
+    return card;
 }
+
+/**
+ * Deals the dealer two cards, and then the player two cards
+ * While dealing the cards, it also calculates the value of each card and adds
+ * how much each hand is worth
+ */
+
+function setTable() {
+    while (dealerHand.length < 2) {
+        let newCard = dealCard();
+        dealerHand.push(newCard)
+        dealerTotal += getValue(newCard);
+        console.log(dealerHand);
+        console.log(dealerTotal);
+    }
+
+    while (yourHand.length < 2) {
+        let newCard = dealCard();
+        yourHand.push(newCard)
+        yourTotal += getValue(newCard);
+        console.log(yourHand);
+        console.log(yourTotal);
+    }
+
+}
+
+
+/**
+ * Calculates how much each card is worth
+ */
 
 function getValue(card) {
     let data = card.split("-")[0];
@@ -73,3 +106,5 @@ let topCard = newDeck[0];
 let topCardValue = getValue(topCard);
 
 console.log(topCardValue);
+
+setTable();
