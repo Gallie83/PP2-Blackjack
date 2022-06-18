@@ -1,5 +1,15 @@
+let dealerTotal = 0;
+let yourTotal = 0;
 
+let dealerAce = 0;
+let yourAce = 0;
 
+let dealerHand = [];
+let yourHand = [];
+
+let hit = true;
+
+let faceDown;
 
 /**
  * Builds Deck of 52 cards from A-S, A-2, A-3 etc
@@ -19,7 +29,7 @@ function buildDeck() {
 }
 
 /**
- * Takes Deck of cards and shuffle them
+ * Takes Deck of cards and shuffles it
  */
 function shuffleDeck(deck) {
     for (let i = 0; i < 52; i++) {
@@ -34,3 +44,32 @@ function shuffleDeck(deck) {
 let newDeck = buildDeck();
 shuffleDeck(newDeck);
 
+
+
+function dealCards() {
+    faceDown = deck.shift();
+    dealerTotal += getValue(faceDown);
+}
+
+function getValue(card) {
+    let data = card.split("-")[0];
+    let dataValue = parseInt(data);
+
+
+
+    if (isNaN(dataValue)) {
+        ;
+        if (data === 'A') {
+            return 11;
+        } else {
+            return 10;
+        }
+    } else {
+        return dataValue;
+    }
+}
+
+let topCard = newDeck[0];
+let topCardValue = getValue(topCard);
+
+console.log(topCardValue);
