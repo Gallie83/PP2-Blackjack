@@ -58,6 +58,9 @@ function dealCard() {
 
 function setTable() {
     dealerHand.unshift(topCard);
+    dealerTotal += getValue(topCard);
+    checkDealerAce(topCard);
+
 
 
     while (dealerTotal < 16) {
@@ -68,6 +71,10 @@ function setTable() {
         let cardImg = document.createElement("img");
         cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
         document.getElementById("cards-dealer").append(cardImg);
+
+        checkDealerAce(newCard);
+        smallAceDealer();
+
 
 
         console.log(dealerHand);
@@ -145,7 +152,7 @@ function addPlayerCard() {
     console.log(yourTotal);
 
     checkYourAce(newCard);
-    smallAce();
+    smallAcePlayer();
 
     let cardImg = document.createElement("img");
     cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
@@ -153,18 +160,18 @@ function addPlayerCard() {
 }
 
 function checkYourAce(card) {
-    if (card[0] === 'A' || card[1] === 'A') {
+    if (card[0] === 'A') {
         yourAce += 1;
     }
 }
 
 function checkDealerAce(card) {
-    if (card[0] === 'A' || card[1] === 'A') {
+    if (card[0] === 'A') {
         dealerAce += 1;
     }
 }
 
-function smallAce() {
+function smallAcePlayer() {
     if (yourTotal > 21 && yourAce >= 1) {
         yourTotal -= 10;
         yourAce -= 1;
@@ -173,3 +180,10 @@ function smallAce() {
 
 }
 
+function smallAceDealer() {
+    if (dealerTotal > 21 && dealerAce >= 1) {
+        dealerTotal -= 10;
+        dealerAce -= 1;
+    }
+
+}
