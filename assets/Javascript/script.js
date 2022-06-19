@@ -83,6 +83,8 @@ function setTable() {
         cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
         document.getElementById("cards-yours").append(cardImg);
 
+        checkYourAce(newCard);
+
         console.log(yourHand);
         console.log(yourTotal);
     }
@@ -112,6 +114,7 @@ function getValue(card) {
     } else {
         return dataValue;
     }
+
 }
 
 /**
@@ -133,7 +136,7 @@ hitBtn.addEventListener("click", addPlayerCard);
 
 function addPlayerCard() {
     if (yourTotal > 21) {
-        return
+        return;
     }
     let newCard = dealCard();
     yourHand.push(newCard)
@@ -141,8 +144,32 @@ function addPlayerCard() {
     console.log(yourHand);
     console.log(yourTotal);
 
+    checkYourAce(newCard);
+    smallAce();
+
     let cardImg = document.createElement("img");
     cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
     document.getElementById("cards-yours").append(cardImg);
+}
+
+function checkYourAce(card) {
+    if (card[0] === 'A' || card[1] === 'A') {
+        yourAce += 1;
+    }
+}
+
+function checkDealerAce(card) {
+    if (card[0] === 'A' || card[1] === 'A') {
+        dealerAce += 1;
+    }
+}
+
+function smallAce() {
+    if (yourTotal > 21 && yourAce >= 1) {
+        yourTotal -= 10;
+        yourAce -= 1;
+        console.log(yourTotal);
+    }
 
 }
+
