@@ -7,11 +7,8 @@ let yourAce = 0;
 let dealerHand = [];
 let yourHand = [];
 
-let hit = true;
-
-
 /**
- * Builds Deck of 52 cards from A-S, A-2, A-3 etc
+ * Builds Deck of 52 cards from A-S, A-D, A-C etc
  */
 function buildDeck() {
     const values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];//This is the actual number value of the card
@@ -49,7 +46,7 @@ shuffleDeck(newDeck);
  * Removes a card from the shuffled deck
  */
 function dealCard() {
-    let card = newDeck.shift();
+    let card = newDeck.pop();
     return card;
 }
 
@@ -135,9 +132,17 @@ hitBtn.addEventListener("click", addPlayerCard);
 
 
 function addPlayerCard() {
+    if (yourTotal > 21) {
+        return
+    }
     let newCard = dealCard();
     yourHand.push(newCard)
     yourTotal += getValue(newCard);
     console.log(yourHand);
     console.log(yourTotal);
+
+    let cardImg = document.createElement("img");
+    cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
+    document.getElementById("cards-yours").append(cardImg);
+
 }
