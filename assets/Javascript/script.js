@@ -159,6 +159,37 @@ function addPlayerCard() {
     document.getElementById("cards-yours").append(cardImg);
 }
 
+/**
+ * Adds stand button feature
+ */
+
+const stand = document.getElementById("stand-btn");
+stand.addEventListener("click", dealerHit);
+
+
+
+/**
+ * If the dealer has a total of 16 when player chooses to stand,
+ * the dealer will hit one more time
+ */
+function dealerHit() {
+    if (dealerTotal === 16) {
+        let newCard = dealCard();
+        dealerHand.push(newCard)
+        dealerTotal += getValue(newCard);
+
+        let cardImg = document.createElement("img");
+        cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
+        document.getElementById("cards-dealer").append(cardImg);
+
+        checkDealerAce(newCard);
+        smallAceDealer();
+
+        console.log(dealerHand);
+        console.log(dealerTotal);
+    }
+}
+
 function checkYourAce(card) {
     if (card[0] === 'A') {
         yourAce += 1;
