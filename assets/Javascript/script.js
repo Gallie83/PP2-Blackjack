@@ -165,8 +165,8 @@ function addPlayerCard() {
 
 const stand = document.getElementById("stand-btn");
 stand.addEventListener("click", dealerHit);
-
-
+stand.addEventListener("click", flipCard);
+stand.addEventListener("click", compareScores);
 
 /**
  * If the dealer has a total of 16 when player chooses to stand,
@@ -188,6 +188,30 @@ function dealerHit() {
         console.log(dealerHand);
         console.log(dealerTotal);
     }
+}
+
+
+/**
+ * Reveals dealers hidden card
+ */
+function flipCard() {
+    document.getElementById("face-down").src = "../PP2-Blackjack/assets/cards/" + topCard + ".png"
+}
+
+function compareScores() {
+    let message = "";
+
+    if (yourTotal > dealerTotal) {
+        message = "You Win!";
+    } else if (yourTotal < dealerTotal && dealerTotal > 21) {
+        message = "You Win!";
+    } else if (yourTotal === dealerTotal) {
+        message = "Tie!";
+    } else {
+        message = "You Lose!";
+    }
+
+    document.getElementById("message").innerText = message;
 }
 
 function checkYourAce(card) {
