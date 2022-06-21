@@ -255,6 +255,9 @@ function compareScores() {
     document.getElementById("message").innerText = message;
     document.getElementById("dealer-score").innerText = 'Dealers Score:' + dealerScore;
     document.getElementById("your-score").innerText = 'Your Score:' + yourScore;
+
+    document.getElementById("hit-btn").disabled = true;
+    document.getElementById("stand-btn").disabled = true;
 }
 
 const restart = document.getElementById("restart-btn");
