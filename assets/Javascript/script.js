@@ -78,8 +78,6 @@ function setTable() {
         checkDealerAce(newCard);
         smallAceDealer();
 
-
-
         console.log(dealerHand);
         console.log(dealerTotal);
     }
@@ -95,6 +93,9 @@ function setTable() {
 
         checkYourAce(newCard);
 
+        document.getElementById("your-card-total").innerText = 'Your Cards:' + yourTotal;
+
+
         console.log(yourHand);
         console.log(yourTotal);
     }
@@ -103,6 +104,11 @@ function setTable() {
 
 }
 
+
+/**
+ * When table is set, this checks if player gets an instant blackjack and,
+ * adds to their win count
+ */
 function blackJack() {
     if (yourTotal === 21) {
         document.getElementById("message").innerText = "BlackJack!";
@@ -173,11 +179,18 @@ function addPlayerCard() {
     document.getElementById("cards-yours").append(cardImg);
 }
 
+
+/**
+ * Checks if player has gone over 21 when drawing a card and disables hitting or standing
+ */
 function bust() {
     if (yourTotal > 21) {
         document.getElementById("message").innerText = "Your Bust!";
         dealerScore += 1;
         document.getElementById("dealer-score").innerText = 'Dealers Score:' + dealerScore;
+
+        document.getElementById("hit-btn").disabled = true;
+        document.getElementById("stand-btn").disabled = true;
     }
 }
 
