@@ -1,5 +1,11 @@
+window.localStorage.setItem("dealerScore", "");
+window.localStorage.setItem("yourScore", "");
+
 let dealerScore = 0;
 let yourScore = 0;
+
+dealerScore = localStorage.getItem('dealerScore');
+yourScore = localStorage.getItem('yourScore');
 
 let dealerTotal = 0;
 let yourTotal = 0;
@@ -173,10 +179,12 @@ function addPlayerCard() {
     smallAcePlayer();
 
     bust();
+    fiveCard();
 
     let cardImg = document.createElement("img");
     cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
     document.getElementById("cards-yours").append(cardImg);
+
     document.getElementById("your-card-total").innerText = 'Your Cards:' + yourTotal;
 }
 
@@ -194,6 +202,20 @@ function bust() {
         document.getElementById("stand-btn").disabled = true;
     }
 }
+
+function fiveCard() {
+    if (yourHand.length === 5 && yourTotal <= 21) {
+        yourScore += 1;
+
+        document.getElementById("message").innerText = "You Win!";
+        document.getElementById("dealer-score").innerText = 'Dealers Score:' + dealerScore;
+        document.getElementById("your-score").innerText = 'Your Score:' + yourScore;
+
+        document.getElementById("hit-btn").disabled = true;
+        document.getElementById("stand-btn").disabled = true;
+    }
+}
+
 
 /**
  * Adds stand button feature
@@ -260,14 +282,6 @@ function compareScores() {
     document.getElementById("stand-btn").disabled = true;
 }
 
-const restart = document.getElementById("restart-btn");
-
-
-
-
-function hitDisable() {
-
-}
 
 /**
  * These functions check for aces in the player and dealer hand

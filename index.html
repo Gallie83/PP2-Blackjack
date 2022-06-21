@@ -16,7 +16,11 @@
 
     <h1>BlackJack</h1>
 
-    <h2>Dealers Cards:</h2>
+    <div>
+        <p id="message"></p>
+    </div>
+
+    <h2>Dealers Cards Total:</h2>
     <div>
         <p id="dealer-card-total"></p>
     </div>
@@ -25,22 +29,18 @@
 
     </div>
 
-    <h2>Your Cards:</h2>
+    <h2>Your Cards Total:</h2>
     <div>
         <p id="your-card-total"></p>
     </div>
     <div id="cards-yours">
     </div>
 
-    <div>
-        <p id="message"></p>
-    </div>
-
 
 
     <button id="hit-btn">Hit</button>
     <Button id="stand-btn">Stand</Button>
-    <button id="restart-btn">Restart</button>
+    <button onClick="window.location.reload();" id="restart-btn">Restart</button>
     <div>
         <p id="dealer-score">Dealers Score:0</p>
         <p id="your-score">Your Score:0</p>
