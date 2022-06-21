@@ -1,3 +1,6 @@
+let dealerScore = 0;
+let yourScore = 0;
+
 let dealerTotal = 0;
 let yourTotal = 0;
 
@@ -96,8 +99,17 @@ function setTable() {
         console.log(yourTotal);
     }
 
+    blackJack();
+
 }
 
+function blackJack() {
+    if (yourTotal === 21) {
+        document.getElementById("message").innerText = "BlackJack!";
+        yourScore += 1;
+        document.getElementById("your-score").innerText = 'Your Score:' + yourScore;
+    }
+}
 
 /**
  * Calculates how much each card is worth
@@ -154,9 +166,19 @@ function addPlayerCard() {
     checkYourAce(newCard);
     smallAcePlayer();
 
+    bust();
+
     let cardImg = document.createElement("img");
     cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
     document.getElementById("cards-yours").append(cardImg);
+}
+
+function bust() {
+    if (yourTotal > 21) {
+        document.getElementById("message").innerText = "Your Bust!";
+        dealerScore += 1;
+        document.getElementById("dealer-score").innerText = 'Dealers Score:' + dealerScore;
+    }
 }
 
 /**
@@ -203,16 +225,35 @@ function compareScores() {
 
     if (yourTotal > dealerTotal) {
         message = "You Win!";
+        yourScore += 1;
     } else if (yourTotal < dealerTotal && dealerTotal > 21) {
         message = "You Win!";
+        yourScore += 1;
     } else if (yourTotal === dealerTotal) {
         message = "Tie!";
     } else {
         message = "You Lose!";
+        dealerScore += 1;
     }
 
+
     document.getElementById("message").innerText = message;
+    document.getElementById("dealer-score").innerText = 'Dealers Score:' + dealerScore;
+    document.getElementById("your-score").innerText = 'Your Score:' + yourScore;
 }
+
+const restart = document.getElementById("restart-btn");
+
+
+
+
+function hitDisable() {
+
+}
+
+/**
+ * These functions check for aces in the player and dealer hand
+ */
 
 function checkYourAce(card) {
     if (card[0] === 'A') {
@@ -226,6 +267,9 @@ function checkDealerAce(card) {
     }
 }
 
+/**
+ * These functions let the Aces count for 1 if > 21
+ */
 function smallAcePlayer() {
     if (yourTotal > 21 && yourAce >= 1) {
         yourTotal -= 10;
