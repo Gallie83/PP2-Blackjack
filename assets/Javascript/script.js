@@ -177,6 +177,7 @@ function addPlayerCard() {
     let cardImg = document.createElement("img");
     cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
     document.getElementById("cards-yours").append(cardImg);
+    document.getElementById("your-card-total").innerText = 'Your Cards:' + yourTotal;
 }
 
 
@@ -231,6 +232,7 @@ function dealerHit() {
  */
 function flipCard() {
     document.getElementById("face-down").src = "../PP2-Blackjack/assets/cards/" + topCard + ".png"
+    document.getElementById("dealer-card-total").innerText = 'Dealer Cards:' + dealerTotal;
 }
 
 function compareScores() {
