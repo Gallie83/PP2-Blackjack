@@ -73,10 +73,18 @@ function setTable() {
 
 
 
+<<<<<<< Updated upstream
     while (dealerTotal < 16) {
         let newCard = dealCard();
         dealerHand.push(newCard)
         dealerTotal += getValue(newCard);
+=======
+
+        if (dealerHand.length === 1) {
+            let newCard = dealCard();
+            dealerHand.push(newCard)
+            dealerTotal += getValue(newCard);
+>>>>>>> Stashed changes
 
         let cardImg = document.createElement("img");
         cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
@@ -122,7 +130,15 @@ function blackJack() {
         document.getElementById("message").innerText = "BlackJack!";
         yourScore += 1;
 
+<<<<<<< Updated upstream
         document.getElementById("your-score").innerText = 'Your Score:' + yourScore;
+=======
+            document.getElementById("your-score").innerText = 'Your Score:' + yourScore;
+
+            document.getElementById("hit-btn").disabled = true;
+            document.getElementById("stand-btn").disabled = true;
+        }
+>>>>>>> Stashed changes
     }
 }
 
@@ -226,6 +242,26 @@ function fiveCard() {
     }
 }
 
+<<<<<<< Updated upstream
+=======
+    /**
+     * Reveals dealers hidden card
+     */
+    function flipCard() {
+        document.getElementById("face-down").src = "../PP2-Blackjack/assets/cards/" + topCard + ".png";
+        document.getElementById("dealer-card-total").innerText = 'Dealer Cards:' + dealerTotal;
+    }
+
+    /**
+     * If the dealer has a total of 16 when player chooses to stand,
+     * the dealer will hit one more time
+     */
+    function dealerHit() {
+        while (dealerTotal < 17) {
+            let newCard = dealCard();
+            dealerHand.push(newCard)
+            dealerTotal += getValue(newCard);
+>>>>>>> Stashed changes
 
 
 /**
@@ -248,9 +284,12 @@ function dealerHit() {
         dealerHand.push(newCard)
         dealerTotal += getValue(newCard);
 
+<<<<<<< Updated upstream
         let cardImg = document.createElement("img");
         cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
         document.getElementById("cards-dealer").append(cardImg);
+=======
+>>>>>>> Stashed changes
 
         checkDealerAce(newCard);
         smallAceDealer();
@@ -261,6 +300,7 @@ function dealerHit() {
 }
 
 
+<<<<<<< Updated upstream
 /**
  * Reveals dealers hidden card
  */
@@ -283,6 +323,12 @@ function compareScores() {
     } else {
         message = "You Lose!";
         dealerScore += 1;
+=======
+        document.getElementById("dealer-card-total").innerText = dealerTotal;
+
+        document.getElementById("hit-btn").disabled = true;
+        document.getElementById("stand-btn").disabled = true;
+>>>>>>> Stashed changes
     }
 
 
@@ -358,3 +404,49 @@ function loseSound() {
     let audio = new Audio("../PP2-Blackjack/assets/sounds/awh.mp3");
     audio.play();
 }
+<<<<<<< Updated upstream
+=======
+
+runGame();
+
+const restart = document.getElementById("restart-btn");
+
+restart.addEventListener("click", clearTable);
+restart.addEventListener("click", clearHands);
+restart.addEventListener("click", unflipCard);
+restart.addEventListener("click", runGame);
+restart.addEventListener("click", buttons);
+
+function clearHands() {
+    dealerTotal = 0;
+    yourTotal = 0;
+
+    dealerAce = 0;
+    yourAce = 0;
+
+    dealerHand = [];
+    yourHand = [];
+
+}
+
+function buttons() {
+    document.getElementById("hit-btn").disabled = false;
+    document.getElementById("stand-btn").disabled = false;
+}
+
+function clearTable() {
+    document.getElementById("cards-dealer").innerHTML = "";
+    document.getElementById("cards-yours").innerHTML = "";
+    document.getElementById("dealer-card-total").innerHTML = "";
+
+    document.getElementById("message").innerHTML = "";
+}
+
+function unflipCard() {
+    document.getElementById("face-down").src = "../PP2-Blackjack/assets/cards/BACK.png";
+    // let topCardImg = document.createElement("img");
+    // topCardImg.src = "../PP2-Blackjack/assets/cards/BACK.png";
+    // document.getElementById("face-down").append(topCardImg);
+
+}
+>>>>>>> Stashed changes
