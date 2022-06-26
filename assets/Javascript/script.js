@@ -76,7 +76,7 @@ function runGame() {
 
 
 
-        while (dealerTotal < 16) {
+        if (dealerHand.length < 2) {
             let newCard = dealCard();
             dealerHand.push(newCard)
             dealerTotal += getValue(newCard);
@@ -126,6 +126,9 @@ function runGame() {
             yourScore += 1;
 
             document.getElementById("your-score").innerText = 'Your Score:' + yourScore;
+
+            document.getElementById("hit-btn").disabled = true;
+            document.getElementById("stand-btn").disabled = true;
         }
     }
 
@@ -242,11 +245,11 @@ function runGame() {
     stand.addEventListener("click", hitSound);
 
     /**
-     * If the dealer has a total of 16 when player chooses to stand,
-     * the dealer will hit one more time
+     * If the dealer has less than 17 when player chooses to stand,
+     * the dealer will hit
      */
     function dealerHit() {
-        if (dealerTotal === 16) {
+        while (dealerTotal < 17) {
             let newCard = dealCard();
             dealerHand.push(newCard)
             dealerTotal += getValue(newCard);
@@ -335,33 +338,6 @@ function runGame() {
     }
 
 }
-/**
- * Audio effects
- */
-
-
-let shuffleSound = function () {
-    let audio = new Audio("../PP2-Blackjack/assets/sounds/shuffling-cards-5.mp3");
-    audio.play();
-}
-
-
-function hitSound() {
-    let audio = new Audio("../PP2-Blackjack/assets/sounds/card.mp3");
-    audio.play();
-}
-
-
-function winSound() {
-    let audio = new Audio("../PP2-Blackjack/assets/sounds/win.mp3");
-    audio.play();
-}
-
-
-function loseSound() {
-    let audio = new Audio("../PP2-Blackjack/assets/sounds/awh.mp3");
-    audio.play();
-}
 
 runGame();
 
@@ -400,9 +376,32 @@ function clearTable() {
 
 function unflipCard() {
     document.getElementById("face-down").src = "../PP2-Blackjack/assets/cards/BACK.png";
-    // let topCardImg = document.createElement("img");
-    // topCardImg.src = "../PP2-Blackjack/assets/cards/BACK.png";
-    // document.getElementById("face-down").append(topCardImg);
-
 }
 
+/**
+ * Audio effects
+ */
+
+
+let shuffleSound = function () {
+    let audio = new Audio("../PP2-Blackjack/assets/sounds/shuffling-cards-5.mp3");
+    audio.play();
+}
+
+
+function hitSound() {
+    let audio = new Audio("../PP2-Blackjack/assets/sounds/card.mp3");
+    audio.play();
+}
+
+
+function winSound() {
+    let audio = new Audio("../PP2-Blackjack/assets/sounds/win.mp3");
+    audio.play();
+}
+
+
+function loseSound() {
+    let audio = new Audio("../PP2-Blackjack/assets/sounds/awh.mp3");
+    audio.play();
+}
