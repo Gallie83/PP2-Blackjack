@@ -81,9 +81,31 @@ img {
         color: white;
     }
 
+    h2 {
+        /* margin: 8px; */
+        color: black;
+    }
+
+    #rules {
+        color: black;
+    }
+
+    h3 {
+        /* margin: 2px; */
+        text-align: center;
+        padding-left: 0%;
+    }
+
+
+    img {
+        height: 8rem;
+        width: 5rem;
+        margin: 1px;
+    }
+}
+
+@media (max-width:400px) {
     h1 {
-        /* float: left;
-        max-width: 50%; */
         margin: 10px;
     }
 
@@ -111,4 +133,5 @@ img {
         width: 5rem;
         margin: 1px;
     }
+
 }
