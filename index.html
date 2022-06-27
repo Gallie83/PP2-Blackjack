@@ -8,10 +8,11 @@
 
     <link rel="stylesheet" href="assets/CSS/blackjack.css">
 
+    <!-- Links h1 font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
+    <!-- Links body font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
@@ -21,9 +22,10 @@
 
 <body>
     <div id="content">
+        <!-- Main Heading -->
         <h1>BlackJack</h1>
 
-
+        <!-- How to play section -->
         <div id="instructions">
             <h2 id="collapsible">How to Play</h2>
             <div id="rules">
@@ -43,6 +45,7 @@
 
         <div>
             <div>
+                <!-- Section containing dealer's hand -->
                 <h3>Dealer Cards</h3>
                 <p class="cards-total" id="dealer-card-total"></p>
             </div>
@@ -53,11 +56,11 @@
                 <span id="cards-dealer"></span>
 
             </div>
-
+            <!-- Message that displays when a winner is determined -->
             <div>
                 <p id="message"></p>
             </div>
-
+            <!-- Section containing player's hand -->
             <div>
                 <h3>Your Cards</h3>
                 <p class="cards-total" id="your-card-total"></p>
@@ -65,12 +68,12 @@
 
             <div id="cards-yours">
             </div>
-
+            <!-- Buttons that allow player to play the game -->
             <button id="hit-btn">Hit</button>
             <Button id="stand-btn">Stand</Button>
-
             <button id="restart-btn">New Deal</button>
 
+            <!-- Score Counters for rounds won -->
             <div>
                 <p id="dealer-score">Dealers Score:</p>
                 <p id="your-score">Your Score:</p>
