@@ -1,6 +1,6 @@
 body {
     /* background-color: rgb(45, 144, 54); */
-    background-image: url(../images/poker.jpg);
+    background-image: url(../images/poker-backup.png);
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
@@ -9,6 +9,7 @@ body {
     font-family: 'Special Elite', cursive;
     line-height: 1.4;
     letter-spacing: 1px;
+    color: white;
 }
 
 h1 {
@@ -20,6 +21,10 @@ h1,
 h2,
 h3 {
     margin: 10px;
+}
+
+h2 {
+    color: black;
 }
 
 button {
@@ -34,9 +39,9 @@ h3 {
 
 img {
     vertical-align: center;
-    height: 12.5rem;
-    width: 7.5rem;
-    /* border: 1px solid black; */
+    height: 14rem;
+    width: 8.5rem;
+
 }
 
 #message {
@@ -69,6 +74,7 @@ img {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
     z-index: 1;
+    color: black;
 }
 
 #instructions:hover #rules {
@@ -79,16 +85,9 @@ img {
 @media (max-width:950px) {
     body {
         background-image: url(../images/poker-phone.webp);
-        color: white;
-    }
-
-    h2 {
-        /* margin: 8px; */
-        color: black;
-    }
-
-    #rules {
-        color: black;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     h3 {
@@ -99,8 +98,8 @@ img {
 
 
     img {
-        height: 17rem;
-        width: 11rem;
+        height: 12.5rem;
+        width: 7.5rem;
         margin: 2px;
     }
 }
@@ -117,10 +116,6 @@ img {
 
     h2 {
         margin: 8px;
-        color: black;
-    }
-
-    #rules {
         color: black;
     }
 
