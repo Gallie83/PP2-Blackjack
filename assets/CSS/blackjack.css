@@ -1,8 +1,8 @@
 body {
     /* background-color: rgb(45, 144, 54); */
     background-image: url(../images/poker.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
     padding-top: 0;
     padding-bottom: 0;
@@ -75,7 +75,8 @@ img {
     display: block;
 }
 
-@media (max-width:500px) {
+
+@media (max-width:950px) {
     body {
         background-image: url(../images/poker-phone.webp);
         color: white;
@@ -98,13 +99,18 @@ img {
 
 
     img {
-        height: 8rem;
-        width: 5rem;
-        margin: 1px;
+        height: 17rem;
+        width: 11rem;
+        margin: 2px;
     }
 }
 
 @media (max-width:400px) {
+    body {
+        margin: 5px;
+        padding: 2px;
+    }
+
     h1 {
         margin: 10px;
     }
