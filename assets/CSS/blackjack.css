@@ -115,7 +115,7 @@ img {
     }
 
     h1 {
-        margin: 15px;
+        padding: 5%;
     }
 
     h2 {
@@ -137,6 +137,10 @@ img {
         height: 8rem;
         width: 5rem;
         margin: 1px;
+    }
+
+    .scores {
+        margin-bottom: 15%;
     }
 
 }
