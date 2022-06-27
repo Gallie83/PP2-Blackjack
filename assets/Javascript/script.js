@@ -37,12 +37,10 @@ function shuffleDeck(deck) {
         deck[i] = deck[randomNum]
         deck[randomNum] = tempCard;
     }
-    console.log(deck);
 }
 
 //   Removes a card from the shuffled deck
 function dealCard(newDeck) {
-    console.log("Hello");
     let card = newDeck.pop();
     return card;
 }
@@ -70,9 +68,6 @@ function setTable(topCard, newDeck) {
 
         checkDealerAce(newCard);
         smallAceDealer();
-
-        console.log(dealerHand);
-        console.log(dealerTotal);
     }
 
     while (yourHand.length < 2) {
@@ -87,12 +82,7 @@ function setTable(topCard, newDeck) {
         checkYourAce(newCard);
 
         document.getElementById("your-card-total").innerText = 'Your Total:' + yourTotal;
-
-
-        console.log(yourHand);
-        console.log(yourTotal);
     }
-
     blackJack();
 }
 
@@ -120,7 +110,6 @@ function getValue(card) {
     let data = card.split("-")[0];
     let dataValue = parseInt(data);
 
-
     /**
      * Determines the value of non-number cards
      */
@@ -134,7 +123,6 @@ function getValue(card) {
     } else {
         return dataValue;
     }
-
 }
 /** 
  * Adds card to player hand and checks if player exceeds 21 or
@@ -144,8 +132,6 @@ function addPlayerCard(newDeck) {
     let newCard = dealCard(newDeck);
     yourHand.push(newCard)
     yourTotal += getValue(newCard);
-    console.log(yourHand);
-    console.log(yourTotal);
 
     checkYourAce(newCard);
     smallAcePlayer();
@@ -172,7 +158,6 @@ function addPlayerCard(newDeck) {
 
 // Checks if player has gone over 21 when drawing a card and disables hitting or standing
 function bust() {
-
     document.getElementById("message").innerText = "Bust!";
     dealerScore += 1;
 
@@ -219,17 +204,12 @@ function dealerHit(newDeck) {
 
         checkDealerAce(newCard);
         smallAceDealer();
-
-        console.log(dealerHand);
-        console.log(dealerTotal);
     }
 }
 
 
 // Reveals dealers hidden card
 function flipCard(topCard, dealerTotal) {
-    console.log("topCard");
-    console.log(topCard);
     document.getElementById("face-down").src = "../PP2-Blackjack/assets/cards/" + topCard + ".png";
     document.getElementById("dealer-card-total").innerText = 'Dealer Total:' + dealerTotal;
 }
@@ -283,7 +263,6 @@ function smallAcePlayer() {
     if (yourTotal > 21 && yourAce >= 1) {
         yourTotal -= 10;
         yourAce -= 1;
-        console.log(yourTotal);
     }
 
 }
@@ -293,7 +272,6 @@ function smallAceDealer() {
         dealerTotal -= 10;
         dealerAce -= 1;
     }
-
 }
 
 // Calls player hit function and adds sound effect
@@ -310,8 +288,6 @@ hitBtn.addEventListener("click", () => {
 
 // The function that runs every time a new hand is dealt
 function runGame() {
-
-
     newDeck = buildDeck();
     shuffleDeck(newDeck);
 
@@ -319,9 +295,7 @@ function runGame() {
     let topCard = newDeck[0];
     let topCardValue = getValue(topCard);
 
-
     setTable(topCard, newDeck);
-
 
     // Adds stand button feature
     const stand = document.getElementById("stand-btn");
@@ -330,7 +304,7 @@ function runGame() {
     stand.addEventListener("click", compareScores);
     stand.addEventListener("click", hitSound);
 
-
+    shuffleSound();
 }
 
 // Runs game on initial load
@@ -384,13 +358,17 @@ function unflipCard() {
  * only draws one card for player
  */
 function killListener() {
-    console.log("kill")
     removeEventListener("click", document.getElementById("hit-btn"));
 }
 
 // Audio effects
 function hitSound() {
     let audio = new Audio("../PP2-Blackjack/assets/sounds/card.mp3");
+    audio.play();
+}
+
+function shuffleSound() {
+    let audio = new Audio("../PP2-Blackjack/assets/sounds/shuffling.mp3");
     audio.play();
 }
 
