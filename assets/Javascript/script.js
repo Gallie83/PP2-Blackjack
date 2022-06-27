@@ -86,7 +86,7 @@ function setTable(topCard, newDeck) {
 
         checkYourAce(newCard);
 
-        document.getElementById("your-card-total").innerText = 'Your Cards:' + yourTotal;
+        document.getElementById("your-card-total").innerText = 'Your Total:' + yourTotal;
 
 
         console.log(yourHand);
@@ -159,7 +159,7 @@ function addPlayerCard(newDeck) {
     cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
     document.getElementById("cards-yours").append(cardImg);
 
-    document.getElementById("your-card-total").innerText = 'Your Cards:' + yourTotal;
+    document.getElementById("your-card-total").innerText = 'Your Total:' + yourTotal;
 
     if (yourTotal === 21) {
         compareScores();
@@ -231,7 +231,7 @@ function flipCard(topCard, dealerTotal) {
     console.log("topCard");
     console.log(topCard);
     document.getElementById("face-down").src = "../PP2-Blackjack/assets/cards/" + topCard + ".png";
-    document.getElementById("dealer-card-total").innerText = 'Dealer Cards:' + dealerTotal;
+    document.getElementById("dealer-card-total").innerText = 'Dealer Total:' + dealerTotal;
 }
 
 //Compares scores and returns message stating winner

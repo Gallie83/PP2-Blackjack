@@ -8,6 +8,12 @@ body {
     padding-bottom: 0;
 }
 
+h1,
+h2,
+h3 {
+    margin: 10px;
+}
+
 button {
     padding: .5em;
 }
@@ -16,7 +22,6 @@ h3 {
     font-size: 1.5rem;
     text-align: left;
     padding-left: 30%;
-
 }
 
 img {
@@ -56,4 +61,40 @@ img {
 
 #instructions:hover #rules {
     display: block;
+}
+
+@media (max-width:500px) {
+    body {
+        background-image: url(../images/poker-phone.webp);
+        color: white;
+    }
+
+    h1 {
+        /* float: left;
+        max-width: 50%; */
+        margin: 10px;
+    }
+
+    h2 {
+        margin: 8px;
+        color: black;
+    }
+
+    #rules {
+        color: black;
+    }
+
+    h3 {
+        margin: 2px;
+    }
+
+    p {
+        margin: 5px;
+    }
+
+    img {
+        height: 8rem;
+        width: 5rem;
+        margin: 1px;
+    }
 }
