@@ -25,28 +25,25 @@
         <!-- Main Heading -->
         <h1>BlackJack</h1>
 
-        <!-- How to play section -->
-        <div id="instructions">
-            <h2 id="collapsible">How to Play</h2>
-            <div id="rules">
-                <p>In Blackjack, the dealer and player are both dealt 2 cards.
-                    <br>
-                    The object of the game is to get as close to 21 as possible without exceeding it.
-                    <br>
-                    Cards are worth their numerical value while picture cards are worth 10.
-                    <br>
-                    Aces are worth 11 unless 21 is exceeded, then they are worth 1.
-                    If the player has 5 cards and still remains under 21, they win.
-                </p>
-            </div>
+        <!-- Instructions section dropdown list -->
+        <button class="accordion">How to Play</button>
+        <div class="panel">
+            <p>In Blackjack, the dealer and player are both dealt 2 cards.
+                <br>
+                The object of the game is to get as close to 21 as possible without exceeding it.
+                <br>
+                Cards are worth their numerical value while picture cards are worth 10.
+                <br>
+                Aces are worth 11 unless 21 is exceeded, then they are worth 1.
+                <br>
+                If the player has 5 cards and still remains under 21, they win.
+            </p>
         </div>
-
-
 
         <div>
             <div>
                 <!-- Section containing dealer's hand -->
-                <h3>Dealer Cards</h3>
+                <h2>Dealer Cards</h2>
                 <p class="cards-total" id="dealer-card-total"></p>
             </div>
 
@@ -62,7 +59,7 @@
             </div>
             <!-- Section containing player's hand -->
             <div>
-                <h3>Your Cards</h3>
+                <h2>Your Cards</h2>
                 <p class="cards-total" id="your-card-total"></p>
             </div>
 
