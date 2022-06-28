@@ -43,6 +43,7 @@ img {
 
 #message {
     font-size: 3rem;
+    color: rgb(245, 42, 42);
 }
 
 .cards-total {
@@ -143,3 +144,4 @@ img {
             margin-bottom: 15%;
         }
     }
+}

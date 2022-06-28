@@ -169,8 +169,6 @@ function addPlayerCard(newDeck) {
     if (yourTotal === 21) {
         compareScores();
     }
-
-
 }
 
 
