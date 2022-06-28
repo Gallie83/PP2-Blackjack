@@ -22,6 +22,7 @@ Welcome to the <a href="https://gallie83.github.io/PP2-Blackjack/" target="_blan
          * [Responsiveness](<#responsiveness>)
     * [**Future Features**](<#future-features>)
 * [**Technologies Used**](<#technologies-used>)
+* [**Debugging**](<#debugging>)
 * [**Testing**](<#testing>)
 * [**Deployment**](<#deployment>)
 * [**Credits**](<#credits>)
@@ -118,7 +119,11 @@ The BlackJack website is designed to be simple and legible above all else.
 
 # Debugging
 
-* While making this website I wanted players to be able to track their wins against the dealer after each round. I found the .localStorage() function which is supposed to keep information in the browser until the browser window is closed. However, the score counters would still return to zero after each round. I then decided to have a 'New Deal' button, which would clear the table and reset all the variables apart from the score counters. This however, interfered with an event listener I had that was listening for a click on the hit button to add another card for the player. After every round another event listener would be added, meaning if it was the third round, one click would add 3 cards for the player and so on. I fixed this by using a function to set the event listener back to one after each round. 
+* While making this website I wanted players to be able to track their wins against the dealer after each round. I found the .localStorage() function which is supposed to keep information in the browser until the browser window is closed. However, the score counters would still return to zero after each round. 
+
+![Local Storage image](readme-images/local-storage.png)
+* I then decided to have a 'New Deal' button, which would clear the table and reset all the variables apart from the score counters. This however, interfered with an event listener I had that was listening for a click on the hit button to add another card for the player. After every round another event listener would be added, meaning if it was the third round, one click would add 3 cards for the player and so on. I fixed this by using a function to set the event listener back to one after each round. 
+
 ![Debugging image](readme-images/listener.png)
 
 
@@ -168,6 +173,7 @@ The method from cloning a project from GitHub is below:
 
 * The fonts came from [Google Fonts](https://fonts.google.com/).
 * The inspiration for the How to play button came from [W3schools](https://www.w3schools.com/howto/howto_js_accordion.asp).
+* All code, except where otherwise specified, was written by me - Kevin Gallagher
 
 ### Media
 * The large sized background came from [Wallpaper Safari](https://cdn.wallpapersafari.com/56/28/6s0C7W.jpg).
@@ -176,7 +182,7 @@ The method from cloning a project from GitHub is below:
 [Back to top](<#contents>)
 
 # Acknowledgements
-The site was completed as a Portfolio 1 Project piece for the Full Stack Software Developer Diploma at the [Code Institute](https://codeinstitute.net/). As such I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), the Slack community, and all at the Code Institute for their help and support.
+The site was completed as a Portfolio 2 Project piece for the Full Stack Software Developer Diploma at the [Code Institute](https://codeinstitute.net/). As such I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), the Slack community, and all at the Code Institute for their help and support. I would also like to thank my friend Luke Walsh, for helping Javascript logic make sense to me.
 
 Kevin Gallagher 2022.
 
