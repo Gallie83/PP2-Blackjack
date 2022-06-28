@@ -94,6 +94,7 @@ The BlackJack website is designed to be simple and legible above all else.
 
       * The players card are followed by the game buttons- 'Hit', 'Stand' and 'New Deal' which functions are explained in the 'How to Play' section.
       Underneath the game buttons are the score counters for how many round you have won vs the dealer.
+      
       ![Game Buttons image](readme-images/game-buttons.png)
 
   * ### Resonsiveness
