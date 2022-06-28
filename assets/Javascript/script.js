@@ -83,6 +83,7 @@ function setTable(topCard, newDeck) {
 
         let cardImg = document.createElement("img");
         cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
+        cardImg.alt = "Dealer second card"
         document.getElementById("cards-dealer").append(cardImg);
 
         checkDealerAce(newCard);
@@ -96,6 +97,7 @@ function setTable(topCard, newDeck) {
 
         let cardImg = document.createElement("img");
         cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
+        cardImg.alt = "Player starting cards"
         document.getElementById("cards-yours").append(cardImg);
 
         checkYourAce(newCard);
@@ -162,6 +164,7 @@ function addPlayerCard(newDeck) {
 
     let cardImg = document.createElement("img");
     cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
+    cardImg.alt = "Players new card"
     document.getElementById("cards-yours").append(cardImg);
 
     document.getElementById("your-card-total").innerText = 'Your Total:' + yourTotal;
@@ -217,6 +220,7 @@ function dealerHit(newDeck) {
 
         let cardImg = document.createElement("img");
         cardImg.src = "../PP2-Blackjack/assets/cards/" + newCard + ".png";
+        cardImg.alt = "Dealers extra cards"
         document.getElementById("cards-dealer").append(cardImg);
 
         checkDealerAce(newCard);
