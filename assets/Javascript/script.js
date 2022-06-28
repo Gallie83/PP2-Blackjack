@@ -325,7 +325,6 @@ function runGame() {
     stand.addEventListener("click", compareScores);
     stand.addEventListener("click", hitSound);
 
-    shuffleSound();
 }
 
 // Runs game on initial load
@@ -341,6 +340,7 @@ restart.addEventListener("click", () => {
     runGame();
     buttons();
     killListener();
+    shuffleSound();
 });
 
 function clearHands() {
