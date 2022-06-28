@@ -69,7 +69,7 @@ The BlackJack website is designed to be simple and legible above all else.
     ![How to play image](readme-images/how-to-play.png)
 
     * When clicked, a paragraph explaining the rules appears, and dissapears on the second click.
-    ![How to play image](readme-images/how-to-play.png)
+    ![Rules image](readme-images/rules.png)
 
 
 [Back to top](<#contents>)
@@ -84,6 +84,7 @@ The BlackJack website is designed to be simple and legible above all else.
   * ### Player Cards
 
       * Below the dealers cards are the players cards. Above the card images is a counter telling the player how much their hand is currently worth.
+
       ![Player Card image](readme-images/player-card.png)
 
 [Back to top](<#contents>)
@@ -95,7 +96,7 @@ The BlackJack website is designed to be simple and legible above all else.
       ![Game Buttons image](readme-images/game-buttons.png)
 
   * ### Resonsiveness
-      * The website is responsive accross all screen sizes. The cards and content scale down to allow it to retain its legibility on smaller screens. 
+      * The website is responsive accross all screen sizes. The cards and content scale down to allow it to retain its legibility on smaller screens. The website was tested on the following browsers with no visible issues for the user. Google Chrome, Microsoft Edge and Mozilla Firefox.
 
 
 ## Future Features 
@@ -115,6 +116,13 @@ The BlackJack website is designed to be simple and legible above all else.
 
 [Back to top](<#contents>)
 
+# Debugging
+
+* While making this website I wanted players to be able to track their wins against the dealer after each round. I found the .localStorage() function which is supposed to keep information in the browser until the browser window is closed. However, the score counters would still return to zero after each round. I then decided to have a 'New Deal' button, which would clear the table and reset all the variables apart from the score counters. This however, interfered with an event listener I had that was listening for a click on the hit button to add another card for the player. After every round another event listener would be added, meaning if it was the third round, one click would add 3 cards for the player and so on. I fixed this by using a function to set the event listener back to one after each round. 
+![Debugging image](readme-images/listener.png)
+
+
+
 # Testing
 
 ## HTML testing
@@ -122,6 +130,9 @@ The BlackJack website is designed to be simple and legible above all else.
 
 ## CSS testing
 ![CSS image](readme-images/css-validated.png)
+
+## Lighthouse testing
+![Lighthouse image](readme-images/lighthouse.png)
 
 
 # Deployment
@@ -133,7 +144,7 @@ The site was deployed to GitHub pages. The steps to deploy a site are as follows
   3. Under **Source**, select the branch to **master**, then click **save**.
   4. Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-![GitHub pages deployed image](assets/readme-assets/pages.png)
+![GitHub pages deployed image](readme-images/pages.png)
 
   The live link to the Github repository can be found here - https://gallie83.github.io/PP1-HTML-CSS/
 
@@ -142,7 +153,7 @@ The method from cloning a project from GitHub is below:
 
 1. Under the repository’s name, click on the **code** tab.
 2. In the **Clone with HTTPS** section, click on the clipboard icon to copy the given URL.
-![Cloning image](assets/readme-assets/clone.png)
+![Cloning image](readme-images/clone.png)
 3. In your IDE of choice, open **Git Bash**.
 4. Change the current working directory to the location where you want the cloned directory to be made.
 5. Type **git clone**, and then paste the URL copied from GitHub.
@@ -155,15 +166,12 @@ The method from cloning a project from GitHub is below:
 # Credits
 ### Content
 
-* The font came from [Google Fonts](https://fonts.google.com/).
-* The colour palette was compiled by [Coolors](https://coolors.co/).
-* The navigation bar idea came from a [YouTube tutorial](https://www.youtube.com/watch?v=oLgtucwjVII).
-* The inspiration for the dropdown menu came from [W3schools](https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp).
-* [Figma](https://figma.com/) was used to create the wireframes.
-
+* The fonts came from [Google Fonts](https://fonts.google.com/).
+* The inspiration for the How to play button came from [W3schools](https://www.w3schools.com/howto/howto_js_accordion.asp).
 
 ### Media
-* The photos all came from [Unsplash](https://unsplash.com/).
+* The large sized background came from [Wallpaper Safari](https://cdn.wallpapersafari.com/56/28/6s0C7W.jpg).
+* The small sized background came from [Wallpaper Cave](https://wallpapercave.com/wp/wp2940168.png).
 
 [Back to top](<#contents>)
 
