@@ -4,7 +4,7 @@ BlackJack is a classic card game where the player and dealer both try to get as 
 
 Welcome to the <a href="https://gallie83.github.io/PP2-Blackjack/" target="_blank" rel="noopener">BlackJack</a> Website.
 
-![BlackJack responsive design](assets/readme/responsive-design.png)
+![BlackJack responsive design](readme-images/responsive-design.png)
 
 # Contents
 
@@ -14,16 +14,12 @@ Welcome to the <a href="https://gallie83.github.io/PP2-Blackjack/" target="_blan
     *  [Typography](<#typography>)
     *  [Colour Scheme](<#colour-scheme>)
 * [**Features**](<#features>)
-    * [**Home**](<#navigation-menu>)
-         * [Navigation menu](<#navigation-menu>)
-           * [Home Image](<#home-image>)
-         * [Our Background](<#Our-background>)
-         * [Footer](<#footer>)
-         * [Tour](<#tour>)
-         * [Album](<#album>)
-         * [Merch](<#merch>)
-         * [Contact](<#contact>)
-         * [Submit page](<#submit-page>)
+    * [**Existing Features**](<#existing-features>)
+         * [How To Play](<#how-to-play>)
+         * [Dealer Cards](<#dealer-cards>)
+         * [Player Cards](<#player-cards>)
+         * [Game Buttons](<#game-buttons>)
+         * [Responsiveness](<#responsiveness>)
     * [**Future Features**](<#future-features>)
 * [**Technologies Used**](<#technologies-used>)
 * [**Testing**](<#testing>)
@@ -51,11 +47,11 @@ Welcome to the <a href="https://gallie83.github.io/PP2-Blackjack/" target="_blan
       The font I chose for the body was 'Special Elite', which I found on <a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts</a>.
       I chose this font as it gave a gritty, old western feel to the website which fit into the aesthetic I was going for.
 
-      ![Body Font image](assets/readme/readme-images/body-font.png)
+      ![Body Font image](readme-images/body-font.png)
 
       For the heading of the website I went with the 'Great Vibes' font. The elegant look of this contrasted well with the more rugged look of 'Special Elite'.
 
-      ![Heading Font image](assets/readme/readme-images/heading-font.png)
+      ![Heading Font image](readme-images/heading-font.png)
 
  * ### Colour Scheme
       The colour scheme eventually chosen is mostly black. I chose a dark background as the cards are then left to be the main focal point of the website. I also have the win/lose message in red to stand out from the black background, it also matches the red back of the cards.
@@ -67,91 +63,53 @@ Welcome to the <a href="https://gallie83.github.io/PP2-Blackjack/" target="_blan
 The BlackJack website is designed to be simple and legible above all else.
 
 ## Existing Features  
-  * ### How to play
+  * ### How to Play
 
     * Located underneath the heading, there is a 'How to play button'.
-    ![How to play image](assets/readme/readme-images/how-to-play.png)
+    ![How to play image](readme-images/how-to-play.png)
 
     * When clicked, a paragraph explaining the rules appears, and dissapears on the second click.
-    ![How to play image](assets/readme/readme-images/how-to-play.png)
+    ![How to play image](readme-images/how-to-play.png)
 
 
 [Back to top](<#contents>)
 
-  * ### Home Image
+  * ### Dealer Cards
 
-      * Located on the home page beneath the navigation bar. It is a picture of the band playing live. Sitting on this image is cover text promoting the new album. The cover text acts as a link to the album page which has more information and on smaller screens the cover text disappears to avoid the page being over saturated. 
-
-![Home image](assets/readme-assets/main-home-img.png)
-[Back to top](<#contents>)
-
-  * ### Our background
-    * The Our background section lets the user know who Afterlife are and where they come from. 
-    * This section has a background image of the band standing infront of the sunset. This imagery behind the information on the bands history adds a nice sentiment to the bands background.
-    * Under the background section, is the mailing list, encouraging users to keep up to date with the bands releases.
-
-![Our Background image](assets/readme-assets/our-background.png)
-[Back to top](<#contents>)
-
-* ### Footer
-    
-    * Contains social media links. To enhance the UX the links open in other tabs.
-    * The social media presence will help the user keep up to date and informed about Afterlife.    
-![Footer image](assets/readme-assets/footer.png)
-[Back to top](<#contents>)
-
-* ### Tour
-
-    * The tour page give the user a list of upcoming tour dates, with links to buy tickets under each date.
-    * There is an image at the top of the screen showing the band playing live.
-![Tour page image](assets/readme-assets/tour-screen.png)
-![Tour page image](assets/readme-assets/tour-dates.png)
-[Back to top](<#contents>)
-
-* ### Album
-    * The album page is there to showcase the upcoming and previous projects of the band. With the album art on the left , and the album description adjascent, it gives a glimpse into the inspiration and the artistic inception of each of the bands projects.
-
-![Album page image](assets/readme-assets/album-1.png)
-![Album page image](assets/readme-assets/album-2.png)
-[Back to top](<#contents>)
-
-* ### Merch
-
-    * This section shows where you can buy merchandise to support the band. With a brief description on what the merchandise website contains, it then has a button below directing you to the merchandise site. Similarly , the image next to the description also acts as a link to the site.
-    * Below this, there is a description for the jewellery partner of the band, also accompanied with links and a picture.
-
-![Merch page image](assets/readme-assets/merch-1.png)
-![Merch page image](assets/readme-assets/merch-2.png)
-[Back to top](<#contents>)
-
-* ### Contact 
-    *The Contact page provides a chance for the user to connect with the band and ask any questions they have after navigating the information on the site. 
-
-    *There are 3 input areas and a sumbit button on the contact form. After the form is submitted it takes the user to the submit page.
-
-![Contact page image](assets/readme-assets/contact.png)
-
+      * Below the How to play button are the dealers cards. One card remains face down until the round is over. If the player wins via blackjack or the five card rule, or goes bust however, then the dealers card does not turn over.
+      ![Dealer Card image](readme-images/dealer-card.png)
 
 [Back to top](<#contents>)
 
-* ### Submit page 
-    * This submit page reassures the user that their question has been received and will be replied to promptly. For this project it validates the form only.
-    * The Navigation bar provides easy access back to the rest of the website.
+  * ### Player Cards
 
-![Submit page image](assets/readme-assets/submit.png)
+      * Below the dealers cards are the players cards. Above the card images is a counter telling the player how much their hand is currently worth.
+      ![Player Card image](readme-images/player-card.png)
 
 [Back to top](<#contents>)
+
+  * ### Game Buttons
+
+      * The players card are followed by the game buttons- 'Hit', 'Stand' and 'New Deal' which functions are explained in the 'How to Play' section.
+      Underneath the game buttons are the score counters for how many round you have won vs the dealer.
+      ![Game Buttons image](readme-images/game-buttons.png)
+
+  * ### Resonsiveness
+      * The website is responsive accross all screen sizes. The cards and content scale down to allow it to retain its legibility on smaller screens. 
+
 
 ## Future Features 
 
-* A page where all the bands music videos would be availible for viewing on the website. This page would have a swipe feature on mobile where users could swipe from one video to another to make browsing through videos easier.
+* A betting system so that players would start with a certain amount of money and be able to bet as much as they want per hand.
+* Players to be able to carry their score over after the browser window is closed.
+* An online leaderboard so players could compare their scores to their friends.
 
 [Back to top](<#contents>)
 
 # Technologies Used
 * [HTML5](https://html.spec.whatwg.org/) - provides the content and structure for the website.
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - provides the styling.
-* [Figma](https://figma.com/) - used to create the wireframes.
+* [Javascript](https://www.javascript.com/) - provides the logic for the website.
 * [Gitpod](https://www.gitpod.io/#get-started) - used to deploy the website.
 * [Github](https://github.com/) - used to host and edit the website.
 
@@ -159,9 +117,12 @@ The BlackJack website is designed to be simple and legible above all else.
 
 # Testing
 
-Please refer to [**_here_**](Testing.md) for more information on testing Afterlife.
+## HTML testing
+![HTML image](readme-images/html-validated.png)
 
-[Back to top](<#contents>)
+## CSS testing
+![CSS image](readme-images/css-validated.png)
+
 
 # Deployment
 
