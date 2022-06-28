@@ -49,22 +49,32 @@ Welcome to the <a href="https://gallie83.github.io/PP2-Blackjack/" target="_blan
 
  * ### Typography
       The font I chose for the body was 'Special Elite', which I found on <a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts</a>.
+      I chose this font as it gave a gritty, old western feel to the website which fit into the aesthetic I was going for.
+
+      ![Body Font image](assets/readme/readme-images/body-font.png)
+
+      For the heading of the website I went with the 'Great Vibes' font. The elegant look of this contrasted well with the more rugged look of 'Special Elite'.
+
+      ![Heading Font image](assets/readme/readme-images/heading-font.png)
 
  * ### Colour Scheme
-      The colour scheme eventually chosen is one based on black and orange. I started with a deep black navbar and footer. I then added the cover text with an orange border to make it stand out and pop on the home screen and eventually landed on a clean, white background color for the body.
+      The colour scheme eventually chosen is mostly black. I chose a dark background as the cards are then left to be the main focal point of the website. I also have the win/lose message in red to stand out from the black background, it also matches the red back of the cards.
 
 
 [Back to top](<#contents>)
 # Features
 
-The Afterlife site is set up to be clear and easy to navigate. It has many features that the user would probably be familiar with, such as a navigation bar or dropdown menu. The feel of the website is meant to be straight forward and easy to find what you are looking for. 
+The BlackJack website is designed to be simple and legible above all else.
 
 ## Existing Features  
-  * ### Navigation Menu
+  * ### How to play
 
-    * Located at the top of each page, it clearly shows how to access different parts of the website. On smaller devices, the links in the navbar, scale down to a dropdown menu to retain accessiblity but reduce the screen looking cluttered. The page the user is currently on remains highlighted.
+    * Located underneath the heading, there is a 'How to play button'.
+    ![How to play image](assets/readme/readme-images/how-to-play.png)
 
-![Navigation bar image](assets/readme-assets/nav-bar.png)
+    * When clicked, a paragraph explaining the rules appears, and dissapears on the second click.
+    ![How to play image](assets/readme/readme-images/how-to-play.png)
+
 
 [Back to top](<#contents>)
 
