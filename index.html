@@ -21,72 +21,71 @@
 </head>
 
 <body>
-    <div id="content">
-        <!-- Main Heading -->
-        <h1>BlackJack</h1>
+    <!-- Main Heading -->
+    <h1>BlackJack</h1>
 
-        <!-- Instructions section dropdown list -->
-        <button class="accordion">How to Play</button>
-        <div class="panel">
-            <p>In Blackjack, the dealer and player are both dealt 2 cards.
-                <br>
-                The object of the game is to get as close to 21 as possible without exceeding it.
-                <br>
-                Cards are worth their numerical value while picture cards are worth 10.
-                <br>
-                Aces are worth 11 unless 21 is exceeded, then they are worth 1.
-                <br>
-                If the player has 5 cards and still remains under 21, they win.
-                <br>
-                The Hit button is used to add another card to your hand.
-                <br>
-                The Stand button compares how much your cards are worth against the dealer.
-                <br>
-                The New Deal button starts the next round.
-                <br>
-                Good Luck!
-            </p>
+    <!-- Instructions section dropdown list -->
+    <button class="accordion">How to Play</button>
+    <div class="panel">
+        <p>In Blackjack, the dealer and player are both dealt 2 cards.
+            <br>
+            The object of the game is to get as close to 21 as possible without exceeding it.
+            <br>
+            Cards are worth their numerical value while picture cards are worth 10.
+            <br>
+            Aces are worth 11 unless 21 is exceeded, then they are worth 1.
+            <br>
+            If the player has 5 cards and still remains under 21, they win.
+            <br>
+            The Hit button is used to add another card to your hand.
+            <br>
+            The Stand button compares how much your cards are worth against the dealer.
+            <br>
+            The New Deal button starts the next round.
+            <br>
+            Good Luck!
+        </p>
+    </div>
+
+    <div>
+        <div>
+            <!-- Section containing dealer's hand -->
+            <h2>Dealer Cards</h2>
+            <p class="cards-total" id="dealer-card-total"></p>
         </div>
 
         <div>
-            <div>
-                <!-- Section containing dealer's hand -->
-                <h2>Dealer Cards</h2>
-                <p class="cards-total" id="dealer-card-total"></p>
-            </div>
 
-            <div>
+            <img id="face-down" src="assets/cards/BACK.png" alt="Back of dealers first card">
+            <span id="cards-dealer"></span>
 
-                <img id="face-down" src="assets/cards/BACK.png" alt="Back of dealers first card">
-                <span id="cards-dealer"></span>
-
-            </div>
-            <!-- Message that displays when a winner is determined -->
-            <div>
-                <p id="message"></p>
-            </div>
-            <!-- Section containing player's hand -->
-            <div>
-                <h2>Your Cards</h2>
-                <p class="cards-total" id="your-card-total"></p>
-            </div>
-
-            <div id="cards-yours">
-            </div>
-            <!-- Buttons that allow player to play the game -->
-            <button id="hit-btn">Hit</button>
-            <Button id="stand-btn">Stand</Button>
-            <button id="restart-btn">New Deal</button>
-
-            <!-- Score Counters for rounds won -->
-            <div class="scores">
-                <p id="dealer-score">Dealers Score:0</p>
-                <p id="your-score">Your Score:0</p>
-            </div>
+        </div>
+        <!-- Message that displays when a winner is determined -->
+        <div>
+            <p id="message"></p>
+        </div>
+        <!-- Section containing player's hand -->
+        <div>
+            <h2>Your Cards</h2>
+            <p class="cards-total" id="your-card-total"></p>
         </div>
 
+        <div id="cards-yours">
+        </div>
+        <!-- Buttons that allow player to play the game -->
+        <button id="hit-btn">Hit</button>
+        <Button id="stand-btn">Stand</Button>
+        <button id="restart-btn">New Deal</button>
 
-        <script src="assets/Javascript/script.js"></script>
+        <!-- Score Counters for rounds won -->
+        <div class="scores">
+            <p id="dealer-score">Dealers Score:0</p>
+            <p id="your-score">Your Score:0</p>
+        </div>
+    </div>
+
+
+    <script src="assets/Javascript/script.js"></script>
 </body>
 
 </html>
