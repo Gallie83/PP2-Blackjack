@@ -94,11 +94,19 @@ The BlackJack website is designed to be simple and legible above all else.
 
       * The players card are followed by the game buttons- 'Hit', 'Stand' and 'New Deal' which functions are explained in the 'How to Play' section.
       Underneath the game buttons are the score counters for how many round you have won vs the dealer.
-      
+
       ![Game Buttons image](readme-images/game-buttons.png)
 
   * ### Resonsiveness
       * The website is responsive accross all screen sizes. The cards and content scale down to allow it to retain its legibility on smaller screens. The website was tested on the following browsers with no visible issues for the user. Google Chrome, Microsoft Edge and Mozilla Firefox.
+
+      * The responsive design tests were carried out manually with [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/) and [Am I Responsive](https://ui.dev/amiresponsive/).
+
+|        | Moto G4 | Galaxy S5 | iPhone 5 | iPad | Display <1200px | Display >1200px |
+|--------|---------|-----------|----------|------|-----------------|-----------------|
+| Render | pass    | pass      | pass     | pass | pass            | pass            |
+| Images | pass    | pass      | pass     | pass | pass            | pass            |
+| Links  | pass    | pass      | pass     | pass | pass            | pass            |
 
 
 ## Future Features 
